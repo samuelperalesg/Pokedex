@@ -36,8 +36,8 @@ app.put('/pokemon/:indexOfPokemonArray', (req, res) => {
 
 // CREATE/POST
 app.post('/pokemon', (req, res) => {
+  pokemon.unshift(req.body)
   res.redirect('/pokemon')
-  pokemon.push(req.body)
 })
 
 

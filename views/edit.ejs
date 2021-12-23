@@ -4,14 +4,13 @@
   <body>
     <%- include('./partials/header.ejs') %>
     <h2>Edit <%= singlePokemon.name %></h2>
-    <img src="<%= singlePokemon.img %>" alt="<%= singlePokemon.name %>">
+    
     <form action="/pokemon/<%= index %>?_method=PUT" method="POST">
+      IMG: <input type="text" name="img" value="<%= singlePokemon.img %>"/><br />
       Name: <input type="text" name="name" value="<%= singlePokemon.name %>"/><br />
       Types: <input type="text" name="type" value="<%= singlePokemon.type %>"/><br />
-      Stats:
-      HP: <input type="text" name="type" value="<%= singlePokemon.stats.hp %>"><br />
-      ATTACK: <input type="text" name="type" value="<%= singlePokemon.stats.attack %>"><br />
-      DEFENSE: <input type="text" name="type" value="<%= singlePokemon.stats.defense %>"><br />
+      
+      
     
       <input type="submit" value="Update Pokemon" />
 
