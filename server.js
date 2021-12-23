@@ -34,6 +34,11 @@ app.put('/pokemon/:indexOfPokemonArray', (req, res) => {
   res.redirect('/pokemon')
 })
 
+// CREATE/POST
+app.post('/pokemon', (req, res) => {
+  res.redirect('/pokemon')
+  pokemon.push(req.body)
+})
 
 
 // EDIT
@@ -44,16 +49,11 @@ app.get('/pokemon/:indexOfPokemonArray/edit', (req, res) => {
   })
 })
 
-// CREATE/POST
-app.post('/pokemon', (req, res) => {
-  pokemon.push(req.body)
-  res.redirect('/pokemon')
-})
 // SHOW
 app.get('/pokemon/:indexOfPokemonArray', (req, res) => {
   res.render('show.ejs', { 
     singlePokemon: pokemon[req.params.indexOfPokemonArray], 
-    index: req.params.indexOfPokemonArrayç
+    name: `${pokemon[req.params.indexOfPokemonArray].name}`
   });
 });
 

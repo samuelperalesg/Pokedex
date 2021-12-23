@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <%- include('./partials/head.ejs') %>
+  <body>
+    <%- include('./partials/header.ejs') %>
+    <h1>Create New Pokemon</h1>
+
+    <form action="/pokemon" method="POST">
+      <form action="/pokemon/<%= index %>?_method=PUT" method="POST">
+        Name: <input type="text" name="name"/><br />
+        Types: <input type="text" name="type"/><br />
+        Stats:
+        HP: <input type="text" name="type"><br />
+        ATTACK: <input type="text" name="type"><br />
+        DEFENSE: <input type="text" name="type"><br />
+      
+        <input type="submit" value="Create Pokemon" />
+    </form>
+
+  </body>
