@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('./partials/head.ejs') %>
+  <body>
+    <%- include('./partials/header.ejs') %>
+    <h2><%= pokemon.name %></h2>
+    <img src="<%= singlePokemon.img %>" alt="<%= singlePokemon.name %>">
+    <ul>
+      <h3>Types:</h3>
+      <li><%= (singlePokemon.type) %></li>
+    </ul>
+
+    <h3>Stats:</h3>
+    <p>HP: <%= singlePokemon.stats.hp %></p>
+    <p>ATTACK: <%= singlePokemon.stats.attack %></p>
+    <p>DEFENSE: <%= singlePokemon.stats.defense %></p>
+
+  </body>
+</html>

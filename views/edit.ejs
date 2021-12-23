@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+  <%- include('./partials/head.ejs') %>
+  <body>
+    <%- include('./partials/header.ejs') %>
+    <h2>Edit <%= singlePokemon.name %></h2>
+    <form action="/pokemon/<%= index %>?_method=PUT" method="POST">
+      Name: <input type="text" name="name" value="<%= singlePokemon.name %>"/><br />
+      Types: <input type="text" name="type" value="<%= singlePokemon.type %>"/><br />
+      <input type="submit" value="Update Pokemon" />
+    </form>
+
+  </body>

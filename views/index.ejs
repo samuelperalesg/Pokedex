@@ -3,12 +3,11 @@
   <%- include('./partials/head.ejs') %>
 <body>
   <%- include('./partials/header.ejs') %>
-    <a href="/pokemon/new">Create New Pokemon</a>
     <ol style="text-transform: capitalize;">
         <% for(let i = 0; i < allPokemon.length; i++) { %>
             <li>
                 <a href="/pokemon/<%= i %>">
-                  <img src="<%= pokemon[i].img %>" alt="<%= pokemon[i].name %>">
+                  <img src="<%= allPokemon[i].img %>" alt="<%= allPokemon[i].name %>">
                 </a>
                 
                 <form action="/pokemon/<%= i %>?_method=DELETE" method="POST">
