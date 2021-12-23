@@ -1,9 +1,8 @@
 // DEPENDENCIES
 const express = require('express');
 const app = express();
-const Pokemon = require('./models/pokemon.js');
+const pokemon = require('./models/pokemon');
 const methodOverride = require('method-override');
-const pokemon = require('./models/pokemon.js');
 const port = 3000
 
 // MIDDLEWARE
@@ -14,7 +13,8 @@ app.use(methodOverride('_method'))
 // INDEX
 app.get('/pokemon', (req, res) => {
 res.render('index.ejs', { 
-  allPokemon: Pokemon });
+  allPokemon: pokemon
+  });
 });
 
 // NEW
